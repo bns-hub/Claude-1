@@ -65,6 +65,7 @@ try {
           agency: (agencyNode?.textContent || "").trim(),
           published: dates[0] || "",
           closes: dates.slice(1).join("-").trim(),
+          link: anchor.href || "",
         };
       })
     );
@@ -103,7 +104,7 @@ try {
   for (const record of uniqueRecords) {
     lines.push([
       "", record.title, record.agency, record.category, "TenderBoard", "",
-      record.published, record.closes, "Live", ""
+      record.published, record.closes, "Live", record.link || ""
     ].map(csvCell).join(","));
   }
 
