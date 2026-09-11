@@ -1,0 +1,8 @@
+{
+  "success": false,
+  "generated_at_sgt": "2026-09-11T16:29:19+08:00",
+  "records": 0,
+  "pages_scanned": 0,
+  "error": "no opportunity rows found — see GeBIZ_Raw_diagnostic.txt",
+  "source": "https://www.gebiz.gov.sg/ptn/opportunity/opportunityListing.xhtml"
+}

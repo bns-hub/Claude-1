@@ -1,0 +1,40 @@
+GeBIZ crawl found no opportunities — 2026-09-11T16:29:19+08:00
+
+This means the page structure assumption is wrong, not that GeBIZ is empty.
+Send this file back and the selectors can be corrected from it.
+
+{
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/opportunityListing.xhtml",
+  "pageTitle": "GeBIZ | Page not found",
+  "anchorsWithCode": 0,
+  "totalAnchors": 51,
+  "tables": 3,
+  "sampleHrefs": [
+    "https://go.gov.sg/trusted-sites",
+    "http://www.gov.sg",
+    "/",
+    "/",
+    "/ptn/opportunity/index.xhtml",
+    "/ptn/supplier/directory/index.xhtml",
+    "/ptn/gtpregistration/signup.xhtml",
+    "#",
+    "https://go.gov.sg/trusted-sites",
+    "/",
+    "/",
+    "/ptn/opportunity/index.xhtml",
+    "/ptn/supplier/directory/index.xhtml",
+    "/ptn/login/loginCorpPass.xhtml",
+    "/ptn/login/loginSingPass.xhtml",
+    "/ptn/login.xhtml",
+    "#",
+    "/ptn/gtpregistration/signup.xhtml",
+    "/ptn/ppplisting/index.xhtml",
+    "/singapore-government-procurement-regime.html",
+    "/government-procurement-opportunities-in-other-countries.html",
+    "/acronyms.html",
+    "/forms-and-downloads.html",
+    "/business-alerts.html",
+    "/useful-links.html"
+  ],
+  "bodyText": "A Singapore Government Agency Website How to identify Home Opportunities Supplier Directory SIGN UP WHICH TO USE? PAGE NOT FOUND Sorry, the page you are looking for could not be found. Kindly contact our GeBIZ Service Centre at (65) 6482 7121 or email us at support@gebiz.gov.sg for further assistance. Government Electronic Business Procurement Information Listing of Indicative Government Procurement Opportunities Guide to Singapore Procurement Government Procurement Opportunities in Other Countries Support Acronyms Forms and Downloads Others Business Alerts Useful Links Contact Us Feedback FAQ Supported browsers are MS Edge 86+, Firefox 83+, or Chrome 86+. Best viewed at a screen resolution of 1024 x 768 pixels or higher. Report Vulnerability Privacy Statement Terms of Use Sitemap © 2026 Government of Singapore Last updated on 27 Nov 2025"
+}
