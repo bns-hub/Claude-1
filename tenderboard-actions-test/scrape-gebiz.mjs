@@ -59,16 +59,20 @@ const parseListingDate = (raw) => {
 const extractRows = () => {
   const clean = (value) => String(value || "").replace(/\s+/g, " ").trim();
 
-  // Walk up until the ancestor holds a whole listing entry, recognised by the
-  // labels GeBIZ puts on every row.
+  // Expand upward while the ancestor still contains exactly one opportunity
+  // link: that is the largest element guaranteed to be a single listing, so it
+  // captures the header ("Tender - REF / AGENCY REF OPEN") and the trailing
+  // closing date as well as the labelled middle. Testing for label presence
+  // instead stops at an inner block and silently loses both ends.
   const rowOf = (anchor) => {
     let node = anchor.parentElement;
-    for (let depth = 0; node && depth < 10; depth += 1) {
-      const text = node.innerText || "";
-      if (text.indexOf("Procurement Category") >= 0 && text.indexOf("Published") >= 0) return node;
+    let best = anchor.parentElement;
+    for (let depth = 0; node && depth < 12; depth += 1) {
+      if (node.querySelectorAll('a[href*="docCode="]').length > 1) break;
+      best = node;
       node = node.parentElement;
     }
-    return anchor.parentElement;
+    return best;
   };
 
   // Text between one label and the next, which is how the row is structured.
@@ -110,7 +114,8 @@ const extractRows = () => {
       agency: between(text, "Agency ", "Published "),
       published: between(text, "Published ", "Procurement Category "),
       category: between(text, "Procurement Category ", "Closing on "),
-      closing: between(text, "Closing on ", "Electronic Submission"),
+      closing: clean((between(text, "Closing on ", "")
+        .match(/^\d{1,2}\s+[A-Za-z]{3}\s+\d{4}(?:\s+\d{1,2}:\d{2}\s*(?:AM|PM)?)?/i) || [])[0] || ""),
       link: href,
       rowText: text,
     };
