@@ -18,9 +18,11 @@
 import { chromium } from "playwright";
 import { writeFile } from "node:fs/promises";
 
+// Read off GeBIZ's own navigation after the first attempt returned their
+// "Page not found" page for all three guessed paths.
 const entryUrls = [
+  "https://www.gebiz.gov.sg/ptn/opportunity/index.xhtml",
   "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=opportunities",
   "https://www.gebiz.gov.sg/ptn/opportunity/opportunityListing.xhtml",
 ];
 const output = "GeBIZ_Raw_latest.csv";
@@ -88,11 +90,19 @@ const extractRows = () => {
     rows: rows.filter((row) => row.title),
     diagnostic: {
       pageTitle: document.title,
+      notFound: /page not found/i.test(document.title || ""),
       anchorsWithCode: anchors.length,
       totalAnchors: document.querySelectorAll("a").length,
       tables: document.querySelectorAll("table").length,
+      rowCount: document.querySelectorAll("tr").length,
+      forms: document.querySelectorAll("form").length,
+      // A JSF listing often shows nothing until a search is submitted, so the
+      // clickable controls are what matter when the page loads but is empty.
+      buttons: Array.from(document.querySelectorAll("button, input[type=submit], a[role=button]"))
+        .map((el) => clean(el.innerText || el.value || el.getAttribute("aria-label")))
+        .filter(Boolean).slice(0, 20),
       sampleHrefs: Array.from(document.querySelectorAll("a"))
-        .map((a) => a.getAttribute("href") || "").filter(Boolean).slice(0, 25),
+        .map((a) => a.getAttribute("href") || "").filter(Boolean).slice(0, 30),
       bodyText: clean(document.body ? document.body.innerText : "").slice(0, 3000),
     },
   };
@@ -106,18 +116,40 @@ const records = [];
 let pagesScanned = 0;
 let usedUrl = "";
 let lastDiagnostic = null;
+const attempts = [];
 
 try {
   // Try each known entry point until one actually lists opportunities.
   for (const url of entryUrls) {
     try {
       await page.goto(url, { waitUntil: "networkidle", timeout: 90_000 });
-    } catch {
+    } catch (error) {
+      attempts.push({ url, error: String(error).slice(0, 200) });
       continue;
     }
     // Give the JSF page a moment to render its results table.
     await page.waitForTimeout(4000);
-    const probe = await page.evaluate(extractRows);
+    let probe = await page.evaluate(extractRows);
+
+    // The page may load fine and list nothing until a search is submitted.
+    if (probe.rows.length === 0 && !probe.diagnostic.notFound) {
+      const search = page
+        .getByRole("button", { name: /search|find|go|submit/i })
+        .or(page.locator('input[type="submit"][value*="earch" i]'))
+        .first();
+      if ((await search.count()) > 0) {
+        try {
+          await search.click({ timeout: 15_000 });
+          await page.waitForTimeout(5000);
+          probe = await page.evaluate(extractRows);
+          probe.diagnostic.searchClicked = true;
+        } catch {
+          probe.diagnostic.searchClickFailed = true;
+        }
+      }
+    }
+
+    attempts.push({ url, ...probe.diagnostic, rowsFound: probe.rows.length });
     lastDiagnostic = { url, ...probe.diagnostic };
     if (probe.rows.length > 0) { usedUrl = url; records.push(...probe.rows); break; }
   }
@@ -159,7 +191,8 @@ try {
       "This means the page structure assumption is wrong, not that GeBIZ is empty.",
       "Send this file back and the selectors can be corrected from it.",
       "",
-      JSON.stringify(lastDiagnostic, null, 2),
+      `Tried ${attempts.length} entry URL(s):`,
+      JSON.stringify(attempts, null, 2),
     ].join("\n");
     await writeFile(diagnosticOutput, `${dump}\n`, "utf8");
     await writeFile(statusOutput, `${JSON.stringify({
