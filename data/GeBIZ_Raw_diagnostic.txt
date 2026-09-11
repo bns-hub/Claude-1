@@ -1,6 +1,6 @@
-GeBIZ crawl OK — 2026-09-11T16:47:14+08:00
+GeBIZ crawl OK — 2026-09-11T16:57:27+08:00
 Entry URL: https://www.gebiz.gov.sg/ptn/opportunity/index.xhtml
-Rows: 240 across 24 page(s) (stopped at the 7-day window)
+Rows: 230 across 23 page(s) (stopped at the 7-day window)
 
 First 5 rows as parsed — check the fields landed in the right columns:
 
@@ -10,7 +10,7 @@ First 5 rows as parsed — check the fields landed in the right columns:
     agency=Ministry of Health-Ministry Headquarter
     category=Construction ⇒ Others
     published=11 Sep 2026 04:20 PM
-    closing=
+    closing=12 Oct 2026 04:00PM
 
 [2] ref=TPO000ETQ26000111
     type=  status=OPEN
@@ -18,7 +18,7 @@ First 5 rows as parsed — check the fields landed in the right columns:
     agency=Temasek Polytechnic
     category=Construction ⇒ General Building & Minor Construction Works
     published=11 Sep 2026 04:20 PM
-    closing=
+    closing=21 Sep 2026 01:00PM
 
 [3] ref=MOESCHETQ26003787
     type=  status=OPEN
@@ -26,7 +26,7 @@ First 5 rows as parsed — check the fields landed in the right columns:
     agency=Ministry of Education - Schools
     category=Administration & Training ⇒ Courses
     published=11 Sep 2026 04:05 PM
-    closing=
+    closing=21 Sep 2026 01:00PM
 
 [4] ref=MOE000ETQ26000223
     type=  status=OPEN
@@ -34,7 +34,7 @@ First 5 rows as parsed — check the fields landed in the right columns:
     agency=Ministry of Education
     category=Administration & Training ⇒ Publications & Periodicals
     published=11 Sep 2026 03:50 PM
-    closing=
+    closing=21 Sep 2026 01:00PM
 
 [5] ref=INDHCIETT26000009
     type=  status=OPEN
@@ -42,4 +42,4 @@ First 5 rows as parsed — check the fields landed in the right columns:
     agency=Hwa Chong Institution
     category=Services ⇒ Professional Services
     published=11 Sep 2026 02:50 PM
-    closing=
+    closing=05 Oct 2026 04:00PM
