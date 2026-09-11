@@ -1,4 +1,4 @@
-GeBIZ crawl found no opportunities — 2026-09-11T16:39:19+08:00
+GeBIZ crawl found no opportunities — 2026-09-11T16:40:57+08:00
 
 This means the page structure assumption is wrong, not that GeBIZ is empty.
 Send this file back and the selectors can be corrected from it.
