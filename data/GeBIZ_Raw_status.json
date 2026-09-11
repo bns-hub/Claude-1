@@ -1,8 +1,9 @@
 {
-  "success": false,
-  "generated_at_sgt": "2026-09-11T16:40:57+08:00",
-  "records": 0,
-  "pages_scanned": 0,
-  "error": "no opportunity rows found — see GeBIZ_Raw_diagnostic.txt",
-  "source": "https://www.gebiz.gov.sg/ptn/opportunity/opportunityListing.xhtml"
+  "success": true,
+  "generated_at_sgt": "2026-09-11T16:47:14+08:00",
+  "records": 240,
+  "pages_scanned": 24,
+  "max_age_days": 7,
+  "stopped_on_age": true,
+  "source": "https://www.gebiz.gov.sg/ptn/opportunity/index.xhtml"
 }

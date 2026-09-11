@@ -1,189 +1,45 @@
-GeBIZ crawl found no opportunities — 2026-09-11T16:40:57+08:00
+GeBIZ crawl OK — 2026-09-11T16:47:14+08:00
+Entry URL: https://www.gebiz.gov.sg/ptn/opportunity/index.xhtml
+Rows: 240 across 24 page(s) (stopped at the 7-day window)
 
-This means the page structure assumption is wrong, not that GeBIZ is empty.
-Send this file back and the selectors can be corrected from it.
+First 5 rows as parsed — check the fields landed in the right columns:
 
-Tried 3 entry URL(s):
-[
-  {
-    "url": "https://www.gebiz.gov.sg/ptn/opportunity/index.xhtml",
-    "pageTitle": "GeBIZ | Opportunities",
-    "notFound": false,
-    "anchorsWithCode": 0,
-    "totalAnchors": 69,
-    "tables": 0,
-    "rowCount": 0,
-    "forms": 3,
-    "buttons": [
-      "For Companies",
-      "For Individuals",
-      "For Foreigners w/o Singpass",
-      "Go",
-      "Open (619)",
-      "Closed (5598)",
-      "First",
-      "Prev",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "Next",
-      "Last",
-      "OK"
-    ],
-    "sampleHrefs": [
-      "#main-content",
-      "#",
-      "https://www.gov.sg",
-      "https://go.gov.sg/trusted-sites",
-      "#",
-      "http://www.gov.sg",
-      "https://www.gebiz.gov.sg/cmw/content/getstart.html",
-      "https://www.gebiz.gov.sg/announcements.html",
-      "https://www.gebiz.gov.sg/about-us.html",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "/",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "/ptn/opportunity/directlink.xhtml?docCode=HLTHQ0ETT26000037",
-      "/ptn/opportunity/directlink.xhtml?docCode=TPO000ETQ26000111"
-    ],
-    "bodyText": "Skip to main content A Singapore Government Agency WebsiteHow to identify GETTING STARTED ANNOUNCEMENTS ABOUT US Home Opportunities Supplier Directory SIGN UP WHICH TO USE? Search for Opportunities Today's Opportunities Search in: Title Document No. Agency Procurement Category Keywords: Match All Match Any Advanced Search BUSINESS OPPORTUNITY LISTING Narrow Results Opportunity Type Agency Procurement Category 6217 opportunities found. Highlight Matched Terms Yes Yes No Sort by Published Date (Latest First) Published Date (Latest First) Closed Date (Earliest First) Relevance Published Date: All (619)Today (47)Past 2 days (140)Past 7 days (276) 1 Tender - HLTHQ0ETT26000037 / MOH ITT B08/26 OPEN ITT For NSC Works for Design, Supply and Installation of Pneumatic Tube System for the Proposed Development of Tengah General and Community Hospital Agency Ministry of Health-Ministry Headquarter Published 11 Sep 2026 04:20 PM Procurement Category Construction ⇒ Others Closing on 12 Oct 2026 04:00PM Electronic Submission 2 Quotation - TPO000ETQ26000111 / TPO-REQ-2026-006322-AK OPEN TPO-REQ-2026-006322-AK - ITQ for Design for Safety Professional Services for the Proposed A&A to Existing Building Blk 10, 11 & 13, ENG Agency Temasek Polytechnic Published 11 Sep 2026 04:20 PM Procurement Category Construction ⇒ General Building & Minor Construction Works Closing on 21 Sep 2026 01:00PM Electronic Submission 3 Quotation - MOESCHETQ26003787 OPEN Vibe Coding Workshops for Sec 1 Agency Ministry of Education - Schools Published 11 Sep 2026 04:05 PM Procurement Category Administration & Training ⇒ Courses Closing on 21 Sep 2026 01:00PM Electronic Submission 4 Quotation - MOE000ETQ26000223 OPEN INVITATION TO QUOTE FOR THE CONCEPTUALISATION, DESIGN, PRODUCTION AND DELIVERY OF THE CLEP-SECONDARY STUDENT LITERARY WORKS COMPILATION 2026 Agency Ministry of Education Published 11 Sep 2026 03:50 PM Procurement Category Administration & Training ⇒ Publications & Periodicals Closing on 21 Sep 2026 01:00PM Electronic Submission 5 Tender Lite - INDHCIETT26000009 OPEN Provision of Group Hospitalization, Surgery and Personal Accident Insurance to Hwa Chong Institution Agency Hwa Chong Institution Published 11 Sep 2026 02:50 PM Procurement Category Services ⇒ Professional Services Closing on 05 Oct 2026 04:00PM Electronic Submission 6 Tender - HDB000ETT26000160 / PCG-TN260111 OPEN MD (AR, CS, ME, QS & PM) CONSULTANCY SERVICES FOR PUBLIC HOUSING PROJECT AT PROJECT FP UNDER SPC+ Agency Housing and Development Board Published 11 Sep 2026 02:50 PM Procurement Category Services ⇒ Professional Services Closing on 07 Oct 2026 04:00PM Electronic Submission 7 Quotation - MOESCHETQ26003811 OPEN Swiss Cottage Sec School - Supply of Science & Technology (Robotics Club) CCA Instructor from 1 January 2027 to 31 December 2028. Agency Ministry of Education - Schools Published 11 Sep 2026 02:50 PM Procurement Category Administration & Training ⇒ Courses Closing on 21 Sep 2026 01:00PM Electronic Submi",
-    "searchClicked": true,
-    "rowsFound": 0
-  },
-  {
-    "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-    "pageTitle": "GeBIZ | Opportunities",
-    "notFound": false,
-    "anchorsWithCode": 0,
-    "totalAnchors": 69,
-    "tables": 0,
-    "rowCount": 0,
-    "forms": 3,
-    "buttons": [
-      "For Companies",
-      "For Individuals",
-      "For Foreigners w/o Singpass",
-      "Go",
-      "Open (619)",
-      "Closed (5598)",
-      "First",
-      "Prev",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "Next",
-      "Last",
-      "OK"
-    ],
-    "sampleHrefs": [
-      "#main-content",
-      "#",
-      "https://www.gov.sg",
-      "https://go.gov.sg/trusted-sites",
-      "#",
-      "http://www.gov.sg",
-      "https://www.gebiz.gov.sg/cmw/content/getstart.html",
-      "https://www.gebiz.gov.sg/announcements.html",
-      "https://www.gebiz.gov.sg/about-us.html",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "/",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "#",
-      "/ptn/opportunity/directlink.xhtml?docCode=HLTHQ0ETT26000037",
-      "/ptn/opportunity/directlink.xhtml?docCode=TPO000ETQ26000111"
-    ],
-    "bodyText": "Skip to main content A Singapore Government Agency WebsiteHow to identify GETTING STARTED ANNOUNCEMENTS ABOUT US Home Opportunities Supplier Directory SIGN UP WHICH TO USE? Search for Opportunities Today's Opportunities Search in: Title Document No. Agency Procurement Category Keywords: Match All Match Any Advanced Search BUSINESS OPPORTUNITY LISTING Narrow Results Opportunity Type Agency Procurement Category 6217 opportunities found. Highlight Matched Terms Yes Yes No Sort by Published Date (Latest First) Published Date (Latest First) Closed Date (Earliest First) Relevance Published Date: All (619)Today (47)Past 2 days (140)Past 7 days (276) 1 Tender - HLTHQ0ETT26000037 / MOH ITT B08/26 OPEN ITT For NSC Works for Design, Supply and Installation of Pneumatic Tube System for the Proposed Development of Tengah General and Community Hospital Agency Ministry of Health-Ministry Headquarter Published 11 Sep 2026 04:20 PM Procurement Category Construction ⇒ Others Closing on 12 Oct 2026 04:00PM Electronic Submission 2 Quotation - TPO000ETQ26000111 / TPO-REQ-2026-006322-AK OPEN TPO-REQ-2026-006322-AK - ITQ for Design for Safety Professional Services for the Proposed A&A to Existing Building Blk 10, 11 & 13, ENG Agency Temasek Polytechnic Published 11 Sep 2026 04:20 PM Procurement Category Construction ⇒ General Building & Minor Construction Works Closing on 21 Sep 2026 01:00PM Electronic Submission 3 Quotation - MOESCHETQ26003787 OPEN Vibe Coding Workshops for Sec 1 Agency Ministry of Education - Schools Published 11 Sep 2026 04:05 PM Procurement Category Administration & Training ⇒ Courses Closing on 21 Sep 2026 01:00PM Electronic Submission 4 Quotation - MOE000ETQ26000223 OPEN INVITATION TO QUOTE FOR THE CONCEPTUALISATION, DESIGN, PRODUCTION AND DELIVERY OF THE CLEP-SECONDARY STUDENT LITERARY WORKS COMPILATION 2026 Agency Ministry of Education Published 11 Sep 2026 03:50 PM Procurement Category Administration & Training ⇒ Publications & Periodicals Closing on 21 Sep 2026 01:00PM Electronic Submission 5 Tender Lite - INDHCIETT26000009 OPEN Provision of Group Hospitalization, Surgery and Personal Accident Insurance to Hwa Chong Institution Agency Hwa Chong Institution Published 11 Sep 2026 02:50 PM Procurement Category Services ⇒ Professional Services Closing on 05 Oct 2026 04:00PM Electronic Submission 6 Tender - HDB000ETT26000160 / PCG-TN260111 OPEN MD (AR, CS, ME, QS & PM) CONSULTANCY SERVICES FOR PUBLIC HOUSING PROJECT AT PROJECT FP UNDER SPC+ Agency Housing and Development Board Published 11 Sep 2026 02:50 PM Procurement Category Services ⇒ Professional Services Closing on 07 Oct 2026 04:00PM Electronic Submission 7 Quotation - MOESCHETQ26003811 OPEN Swiss Cottage Sec School - Supply of Science & Technology (Robotics Club) CCA Instructor from 1 January 2027 to 31 December 2028. Agency Ministry of Education - Schools Published 11 Sep 2026 02:50 PM Procurement Category Administration & Training ⇒ Courses Closing on 21 Sep 2026 01:00PM Electronic Submi",
-    "searchClicked": true,
-    "rowsFound": 0
-  },
-  {
-    "url": "https://www.gebiz.gov.sg/ptn/opportunity/opportunityListing.xhtml",
-    "pageTitle": "GeBIZ | Page not found",
-    "notFound": true,
-    "anchorsWithCode": 0,
-    "totalAnchors": 51,
-    "tables": 3,
-    "rowCount": 15,
-    "forms": 1,
-    "buttons": [
-      "Close"
-    ],
-    "sampleHrefs": [
-      "https://go.gov.sg/trusted-sites",
-      "http://www.gov.sg",
-      "/",
-      "/",
-      "/ptn/opportunity/index.xhtml",
-      "/ptn/supplier/directory/index.xhtml",
-      "/ptn/gtpregistration/signup.xhtml",
-      "#",
-      "https://go.gov.sg/trusted-sites",
-      "/",
-      "/",
-      "/ptn/opportunity/index.xhtml",
-      "/ptn/supplier/directory/index.xhtml",
-      "/ptn/login/loginCorpPass.xhtml",
-      "/ptn/login/loginSingPass.xhtml",
-      "/ptn/login.xhtml",
-      "#",
-      "/ptn/gtpregistration/signup.xhtml",
-      "/ptn/ppplisting/index.xhtml",
-      "/singapore-government-procurement-regime.html",
-      "/government-procurement-opportunities-in-other-countries.html",
-      "/acronyms.html",
-      "/forms-and-downloads.html",
-      "/business-alerts.html",
-      "/useful-links.html",
-      "/contact-us.html",
-      "/ptn/feedback/Feedback.xhtml",
-      "/faq.html",
-      "https://www.tech.gov.sg/report_vulnerability",
-      "/privacy-statement.html"
-    ],
-    "bodyText": "A Singapore Government Agency Website How to identify Home Opportunities Supplier Directory SIGN UP WHICH TO USE? PAGE NOT FOUND Sorry, the page you are looking for could not be found. Kindly contact our GeBIZ Service Centre at (65) 6482 7121 or email us at support@gebiz.gov.sg for further assistance. Government Electronic Business Procurement Information Listing of Indicative Government Procurement Opportunities Guide to Singapore Procurement Government Procurement Opportunities in Other Countries Support Acronyms Forms and Downloads Others Business Alerts Useful Links Contact Us Feedback FAQ Supported browsers are MS Edge 86+, Firefox 83+, or Chrome 86+. Best viewed at a screen resolution of 1024 x 768 pixels or higher. Report Vulnerability Privacy Statement Terms of Use Sitemap © 2026 Government of Singapore Last updated on 27 Nov 2025",
-    "rowsFound": 0
-  }
-]
+[1] ref=HLTHQ0ETT26000037
+    type=  status=OPEN
+    title=ITT For NSC Works for Design, Supply and Installation of Pneumatic Tube System for the Proposed Development of Tengah General and Community Hospital
+    agency=Ministry of Health-Ministry Headquarter
+    category=Construction ⇒ Others
+    published=11 Sep 2026 04:20 PM
+    closing=
+
+[2] ref=TPO000ETQ26000111
+    type=  status=OPEN
+    title=TPO-REQ-2026-006322-AK - ITQ for Design for Safety Professional Services for the Proposed A&A to Existing Building Blk 10, 11 & 13, ENG
+    agency=Temasek Polytechnic
+    category=Construction ⇒ General Building & Minor Construction Works
+    published=11 Sep 2026 04:20 PM
+    closing=
+
+[3] ref=MOESCHETQ26003787
+    type=  status=OPEN
+    title=Vibe Coding Workshops for Sec 1
+    agency=Ministry of Education - Schools
+    category=Administration & Training ⇒ Courses
+    published=11 Sep 2026 04:05 PM
+    closing=
+
+[4] ref=MOE000ETQ26000223
+    type=  status=OPEN
+    title=INVITATION TO QUOTE FOR THE CONCEPTUALISATION, DESIGN, PRODUCTION AND DELIVERY OF THE CLEP-SECONDARY STUDENT LITERARY WORKS COMPILATION 2026
+    agency=Ministry of Education
+    category=Administration & Training ⇒ Publications & Periodicals
+    published=11 Sep 2026 03:50 PM
+    closing=
+
+[5] ref=INDHCIETT26000009
+    type=  status=OPEN
+    title=Provision of Group Hospitalization, Surgery and Personal Accident Insurance to Hwa Chong Institution
+    agency=Hwa Chong Institution
+    category=Services ⇒ Professional Services
+    published=11 Sep 2026 02:50 PM
+    closing=
