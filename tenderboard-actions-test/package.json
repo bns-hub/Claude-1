@@ -3,7 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "crawl": "node scrape.mjs"
+    "crawl": "node scrape.mjs",
+    "crawl:gebiz": "node scrape-gebiz.mjs"
   },
   "dependencies": {
     "playwright": "1.55.0"

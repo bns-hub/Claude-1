@@ -1,0 +1,75 @@
+name: GeBIZ daily cloud crawl
+
+on:
+  schedule:
+    # 09:30 SGT, half an hour before the TenderBoard crawl, so both raw files
+    # are in place before Apps Script collects at 11:00.
+    - cron: "30 9 * * *"
+      timezone: "Asia/Singapore"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gebiz-cloud-crawl
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install
+        working-directory: tenderboard-actions-test
+      - run: npx playwright install --with-deps chromium
+        working-directory: tenderboard-actions-test
+      - run: npm run crawl:gebiz
+        working-directory: tenderboard-actions-test
+        # A failed crawl still writes the diagnostic, which is the whole point
+        # of the run, so the artifact must be uploaded either way.
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gebiz-raw
+          path: |
+            tenderboard-actions-test/GeBIZ_Raw_latest.csv
+            tenderboard-actions-test/GeBIZ_Raw_status.json
+            tenderboard-actions-test/GeBIZ_Raw_diagnostic.txt
+          if-no-files-found: error
+          retention-days: 7
+      - name: Publish latest CSV on tenderboard-data branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          for name in GeBIZ_Raw_latest.csv GeBIZ_Raw_status.json GeBIZ_Raw_diagnostic.txt; do
+            if [ -f "tenderboard-actions-test/$name" ]; then
+              cp "tenderboard-actions-test/$name" "$RUNNER_TEMP/$name"
+            fi
+          done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code origin refs/heads/tenderboard-data >/dev/null 2>&1; then
+            git fetch origin tenderboard-data
+            git switch -C tenderboard-data FETCH_HEAD
+          else
+            git switch --orphan tenderboard-data
+            git rm -rf . 2>/dev/null || true
+          fi
+          mkdir -p data
+          for name in GeBIZ_Raw_latest.csv GeBIZ_Raw_status.json GeBIZ_Raw_diagnostic.txt; do
+            if [ -f "$RUNNER_TEMP/$name" ]; then
+              cp "$RUNNER_TEMP/$name" "data/$name"
+            fi
+          done
+          git add data
+          if git diff --cached --quiet; then
+            echo "Published data is unchanged."
+          else
+            git commit -m "Update GeBIZ raw data"
+            git push origin HEAD:tenderboard-data
+          fi
