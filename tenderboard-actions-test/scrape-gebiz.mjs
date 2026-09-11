@@ -108,7 +108,13 @@ const extractRows = () => {
     return {
       reference: code ? decodeURIComponent(code) : "",
       fullReference: refBlock || (code ? decodeURIComponent(code) : ""),
-      type: typeMatch ? clean(typeMatch[1]) : "",
+      // Read from the reference, not the row. GeBIZ encodes the procurement
+      // type in the document number — ETT for a tender, ETQ for a quotation —
+      // and that is steadier than the row header, which sits outside the
+      // element containing the link and so is not reliably reachable.
+      type: /ETT\d/i.test(code) ? "Tender"
+        : (/ETQ\d/i.test(code) ? "Quotation"
+          : (/EOI/i.test(code) ? "EOI" : (typeMatch ? clean(typeMatch[1]) : ""))),
       status: statusMatch ? clean(statusMatch[1]).toUpperCase() : "OPEN",
       title,
       agency: between(text, "Agency ", "Published "),
