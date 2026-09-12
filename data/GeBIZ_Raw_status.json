@@ -1,8 +1,8 @@
 {
   "success": true,
-  "generated_at_sgt": "2026-09-11T17:03:48+08:00",
-  "records": 230,
-  "pages_scanned": 23,
+  "generated_at_sgt": "2026-09-12T09:42:41+08:00",
+  "records": 240,
+  "pages_scanned": 24,
   "max_age_days": 7,
   "stopped_on_age": true,
   "source": "https://www.gebiz.gov.sg/ptn/opportunity/index.xhtml"

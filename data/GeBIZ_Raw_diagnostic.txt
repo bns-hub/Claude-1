@@ -1,45 +1,45 @@
-GeBIZ crawl OK — 2026-09-11T17:03:48+08:00
+GeBIZ crawl OK — 2026-09-12T09:42:41+08:00
 Entry URL: https://www.gebiz.gov.sg/ptn/opportunity/index.xhtml
-Rows: 230 across 23 page(s) (stopped at the 7-day window)
+Rows: 240 across 24 page(s) (stopped at the 7-day window)
 
 First 5 rows as parsed — check the fields landed in the right columns:
 
-[1] ref=HLTHQ0ETT26000037
+[1] ref=DST000ETQ26000064
+    type=Quotation  status=OPEN
+    title=PURCHASE OF IT HARDWARE FOR SOFTWARE DEVELOPMENT
+    agency=Defence Science and Technology Agency
+    category=IT&Telecommunication ⇒ Notebooks
+    published=11 Sep 2026 05:50 PM
+    closing=24 Sep 2026 01:00PM
+
+[2] ref=NPB000ETT26000102
+    type=Tender  status=OPEN
+    title=PROVISION OF MAINTENANCE AND SUPPORT SERVICES FOR NATIONAL PARKS BOARD (NPARKS) APPLICATIONS FOR FIVE (5) YEARS
+    agency=National Parks Board
+    category=IT&Telecommunication ⇒ IT Services & Software Development
+    published=11 Sep 2026 05:05 PM
+    closing=06 Oct 2026 04:00PM
+
+[3] ref=IMD000ETT26000015
+    type=Tender  status=OPEN
+    title=Provision of testing services to validate local operators' implementations of voice call services
+    agency=Info-communications Media Development Authority
+    category=IT&Telecommunication ⇒ Others
+    published=11 Sep 2026 05:05 PM
+    closing=06 Oct 2026 04:00PM
+
+[4] ref=SDC000ETQ26000043
+    type=Quotation  status=OPEN
+    title=ITQ - Sentosa Wifi Location Analytics Renewal
+    agency=Sentosa Development Corporation
+    category=IT&Telecommunication ⇒ Others
+    published=11 Sep 2026 05:05 PM
+    closing=21 Sep 2026 01:00PM
+
+[5] ref=HLTHQ0ETT26000037
     type=Tender  status=OPEN
     title=ITT For NSC Works for Design, Supply and Installation of Pneumatic Tube System for the Proposed Development of Tengah General and Community Hospital
     agency=Ministry of Health-Ministry Headquarter
     category=Construction ⇒ Others
     published=11 Sep 2026 04:20 PM
     closing=12 Oct 2026 04:00PM
-
-[2] ref=TPO000ETQ26000111
-    type=Quotation  status=OPEN
-    title=TPO-REQ-2026-006322-AK - ITQ for Design for Safety Professional Services for the Proposed A&A to Existing Building Blk 10, 11 & 13, ENG
-    agency=Temasek Polytechnic
-    category=Construction ⇒ General Building & Minor Construction Works
-    published=11 Sep 2026 04:20 PM
-    closing=21 Sep 2026 01:00PM
-
-[3] ref=MOESCHETQ26003787
-    type=Quotation  status=OPEN
-    title=Vibe Coding Workshops for Sec 1
-    agency=Ministry of Education - Schools
-    category=Administration & Training ⇒ Courses
-    published=11 Sep 2026 04:05 PM
-    closing=21 Sep 2026 01:00PM
-
-[4] ref=MOE000ETQ26000223
-    type=Quotation  status=OPEN
-    title=INVITATION TO QUOTE FOR THE CONCEPTUALISATION, DESIGN, PRODUCTION AND DELIVERY OF THE CLEP-SECONDARY STUDENT LITERARY WORKS COMPILATION 2026
-    agency=Ministry of Education
-    category=Administration & Training ⇒ Publications & Periodicals
-    published=11 Sep 2026 03:50 PM
-    closing=21 Sep 2026 01:00PM
-
-[5] ref=INDHCIETT26000009
-    type=Tender  status=OPEN
-    title=Provision of Group Hospitalization, Surgery and Personal Accident Insurance to Hwa Chong Institution
-    agency=Hwa Chong Institution
-    category=Services ⇒ Professional Services
-    published=11 Sep 2026 02:50 PM
-    closing=05 Oct 2026 04:00PM
